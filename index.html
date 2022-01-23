@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webcomponents</title>
+</head>
+<body>
+<get-users></get-users>
+
+<template id="getNewUsers">
+    <get-users></get-users>
+
+    <style>
+        h6 {
+            color: purple;
+            font-size: 20px;
+        }
+    </style>
+    <p id="message"></p>
+</template>
+
+<div class="new-template" id="newTemplate">
+    <slot name="new-template__button">
+        <button type="button"> Нажми на меня</button>
+    </slot>
+</div>
+
+<script src="get-users.js"></script>
+<!--<script>-->
+<!--    elem.onclick = function () {-->
+<!--        elem.attachShadow({mode: 'open'});-->
+
+<!--        elem.shadowRoot.append(getNewUsers.content.cloneNode(true));-->
+
+<!--        elem.shadowRoot.getElementById('message').innerHTML = "Новый шаблон на основе старого";-->
+<!--    };-->
+<!--</script>-->
+<script src="template.js"></script>
+</body>
+</html>
